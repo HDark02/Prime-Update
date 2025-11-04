@@ -1,5 +1,3 @@
-Voici un **README** clair, complet et professionnel pour ton programme 👇
-
 ---
 
 # 📱 Simulateur de Mise à Jour de Téléphone
