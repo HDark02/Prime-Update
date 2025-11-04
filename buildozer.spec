@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Sexy
+title = Prime Update
 
 # (str) Package name
-package.name = myapp_Sexy
+package.name = prime_app
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -13,8 +13,7 @@ package.domain = org.test
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = 
-#py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -38,17 +37,17 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.1.0, kivymd==1.1.1, sdl2_ttf==2.0.15, pillow, asynckivy==0.5.4
+requirements = python3,kivy==2.1.0, kivymd==1.1.1, sdl2_ttf==2.0.15, pillow,
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = 2093679.png
+#presplash.filename = %(source.dir)s/data/presplash.png
 
 # (str) Icon of the application
-icon.filename = 2093679.png
+#icon.filename = %(source.dir)s/data/icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
@@ -61,14 +60,8 @@ orientation = portrait
 # OSX Specific
 #
 
-# Auteur et description
-author = High Dark Comopany of Digital Application
-description = Une application de galerie de photos 'Sexy' pour les adultes.
-
-# Copyright
-copyright = © 2025 High Dark . Tous droits réservés. Reproduction, distribution ou modification interdites sans autorisation écrite.
-
-
+#
+# author = © Copyright Info
 
 # change the major version of python used by the app
 osx.python_version = 3
