@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Prime Update
+title = Update Phone
 
 # (str) Package name
-package.name = prime_app
+package.name = update_phone
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -44,10 +44,10 @@ requirements = python3,kivy==2.1.0, kivymd==1.1.1, sdl2_ttf==2.0.15, pillow,
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = "phone.png"
+presplash.filename = phone.png
 
 # (str) Icon of the application
-icon.filename = "phone.png"
+icon.filename = phone.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
