@@ -1,0 +1,208 @@
+MDScreen:
+    name: "mise_end"
+    tel_name_complet:tel_name_complet
+    version_name_complet:version_name_complet
+    version_name_pre:version_name_pre
+    MDFloatLayout:
+        MDFloatLayout:
+            md_bg_color: 0, 1, 0, 0.5
+            size_hint: .2, .1
+            radius: [35, ]
+            halign: "center"
+            pos_hint: {"x": .4, "center_y": .9}
+    MDFloatLayout:
+        pos_hint: {"center_x": .5, "top": .89}
+        MDLabel:
+            text: "Mise à jour terminée !"
+            pos_hint: {"center_x": .5, "center_y": .95}
+            font_size: "25sp"
+            halign: "center"
+            theme_text_color: "Custom"
+            text_colot: "black"
+            bold: True
+        MDLabel:
+            text: "Votre télépone à été mis à jour avec succès"
+            pos_hint: {"center_x": .5, "center_y": .89}
+            font_size: "20sp"
+            theme_text_color: "Custom"
+            text_colot: "black"
+            size_hint_x: .85
+            opacity: 0.4
+            halign: "center"
+        MDGridLayout:
+            cols: 1
+            rows: 3
+            pos_hint: {"x": .05, "top": .85}
+            size_hint: .9, .7
+            spacing: 5
+            MDFloatLayout:
+                size_hint_y: .15
+                md_bg_color: 0, 0, 0, 0.03
+                radius: [20, ]
+                MDFloatLayout:
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: .97, .97
+                    MDGridLayout:
+                        cols: 2
+                        rows: 2
+                        pos_hint: {"x": .05, "center_y": .75}
+                        size_hint: .9, .3
+                        spacing: 10
+                        MDLabel:
+                            text: "Appareil"
+                            font_size: "15sp"
+                            theme_text_color: "Custom"
+                            text_colot: "black"
+                            # size_hint_x: .85
+                        MDLabel:
+                            text: "Nouvelle version"
+                            font_size: "15sp"
+                            theme_text_color: "Custom"
+                            text_colot: "black"
+                            # size_hint_x: .85
+                        MDLabel:
+                            id: tel_name_complet
+                            text: "Android"
+                            font_size: "20sp"
+                            theme_text_color: "Custom"
+                            text_colot: "black"
+                            # size_hint_x: .85
+                            bold: True
+                        MDLabel:
+                            id: version_name_complet
+                            text: "12"
+                            font_size: "25sp"
+                            theme_text_color: "Custom"
+                            text_colot: "black"
+                    MDLabel:
+                        id: version_name_pre
+                        text: "Version précédente: 11"
+                        pos_hint: {"center_x": .5, "center_y": .35}
+                        font_size: "20sp"
+                        theme_text_color: "Custom"
+                        text_colot: "black"
+                        halign: "center"
+                        opacity: 0.5
+                        size_hint_x: .85
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .5}
+                # md_bg_color: "red"
+                size_hint_y: .5
+
+                MDLabel:
+                    text: "Nouveautés installées"
+                    pos_hint: {"center_x": .5, "center_y": .98}
+                    font_size: "22sp"
+                    theme_text_color: "Custom"
+                    text_colot: "black"
+                    bold: True
+                MDGridLayout:
+                    # md_bg_color: "blue"
+                    pos_hint: {"center_x": .5, "top": .9}
+                    size_hint: 1, .85
+                    rows: 9
+                    cols: 1
+                    Add_thing:
+                        name: "Modules système"
+                        icon_name: "icon_build_n.jpg"
+                        # icon_color: "blue"
+                    Add_thing:
+                        name: "Assistant vocal amélioré"
+                        icon_name: "check"
+                        icon_color: "green"
+                    Add_thing:
+                        name: "Module de connectivité G+"
+                        icon_name: "check"
+                        icon_color: "green"
+                    Add_thing:
+                        name: "Gestionnaire de sécurité avancé"
+                        icon_name: "check"
+                        icon_color: "green"
+                    Add_thing:
+                        name: "Module de protection des données"
+                        icon_name: "check"
+                        icon_color: "green"
+                    Add_thing:
+                        name: "Matériel optimisé"
+                        icon_name: "icon_build.jpg"
+                        icon_color: "blue"
+                    Add_thing:
+                        name: "Capteurs de mouvement"
+                        icon_name: "check"
+                        icon_color: "green"
+                    Add_thing:
+                        name: "Contrôleur de batterie"
+                        icon_name: "check"
+                        icon_color: "green"
+                    Add_thing:
+                        name: "Chipset réseau amélioré"
+                        icon_name: "check"
+                        icon_color: "green"
+            MDGridLayout:
+                pos_hint: {"center_x": .5, "top": .9}
+                size_hint_y: .2
+                rows: 1
+                cols: 2
+                spacing: 10
+                padding: 10
+                MDFloatLayout:
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    md_bg_color: 0, 1, 0, 0.5
+                    radius: [20, ]
+                    size_hint_x: .6
+                    MDFlatButton:
+                        text: "Redémarrer"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        size_hint: 1, 1
+                        font_size: "20sp"
+                        halign: "center"
+                        on_release:
+                            root.manager.transition.direction = "right"
+                            root.manager.current = "acceuil"
+                    MDIcon:
+                        icon: "autorenew"
+                        bold:True
+                        font_size: "30sp"
+                        pos_hint: {"x": .05, "center_y": .5}
+                MDFloatLayout:
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    md_bg_color: app.theme_cls.primary_color
+                    radius: [20, ]
+                    size_hint_x: .4
+                    MDFlatButton:
+                        text: "Nouvelle\nmise à\nur"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        size_hint: 1, 1
+                        halign: "center"
+                        theme_text_color: "Custom"
+                        text_color: "white"
+                        font_size: "20sp"
+                        on_release:
+                            root.manager.transition.direction = "right"
+                            root.manager.current = "acceuil"
+
+<Add_thing@MDFloatLayout>:
+    md_bg_color: 0, 0, 0, 0.1
+    pos_hint: {"center_x": .5, "center_y": .5}
+    name: ""
+    icon_name: "check"
+    icon_color: "green"
+    MDFloatLayout:
+        pos_hint: {"center_x": .5, "center_y": .5}
+        size_hint: .97, .97
+        MDLabel:
+            text: root.name
+            pos_hint: {"x": .1, "center_y": .5}
+            size_hint: 1, 1
+            halign: "left"
+            theme_text_color: "Custom"
+            text_color: "black"
+        MDIcon:
+            icon: root.icon_name
+            bold:True
+            font_size: "20sp"
+            pos_hint: {"center_x": .05, "center_y": .5}
+            theme_text_color: "Custom"
+            text_color: root.icon_color
+            

@@ -1,0 +1,78 @@
+MDScreen:
+    name: "mise_en_cor"
+    tel_name: tel_name
+    tel_version: tel_version
+    progress_oper:progress_oper
+    val_progress_oper:val_progress_oper
+    valeur:valeur
+    MDFloatLayout:
+        md_bg_color: "white"
+        Image:
+            source:"icon_build.jpg"
+            md_bg_color: 0, 1, 0, 0.5
+            size_hint: .5, .5
+            radius: [35, ]
+            halign: "center"
+            pos_hint: {"center_x": .5, "center_y": .8}
+    
+        MDLabel:
+            id: tel_name
+            text: "Android name"
+            pos_hint: {"center_x": .5, "center_y": .65}
+            font_size: "25sp"
+            halign: "center"
+            theme_text_color: "Custom"
+            text_colot: "black"
+            bold: True
+        MDLabel:
+            id: tel_version
+            text: "verison: 14"
+            pos_hint: {"center_x": .5, "center_y": .6}
+            font_size: "20sp"
+            theme_text_color: "Custom"
+            text_colot: "black"
+            halign: "center"
+        
+        MDProgressBar:
+            id: valeur
+            value: 0
+            size_hint: 0.8, .01
+            max:100
+            pos_hint: {"center_x": .5, "center_y": .4}
+            theme_text_color: "Custom"
+            # back_color: "red"
+        MDLabel:
+            id: progress_oper
+            text: "Chargement des modules..."
+            font_size: "15sp"
+            theme_text_color: "Custom"
+            text_colot: "black"
+            radius: [20, ]
+            pos_hint: {"x": .1, "center_y": .45}
+        MDLabel:
+            id: val_progress_oper
+            text: ""
+            font_size: "15sp"
+            theme_text_color: "Custom"
+            text_colot: "black"
+            halign: "center"
+            radius: [20, ]
+            pos_hint: {"center_x": .85, "center_y": .45}
+        MDFloatLayout:
+            radius: [20,]
+            pos_hint: {"center_x": .5, "center_y": .25}
+            md_bg_color: 0, 0, 0, 0.2
+            halign: "center"
+            size_hint: .8, 0.1
+            MDLabel:
+                text: "Ne pas éteindre votre appareil pendant la mise à jour"
+                font_size: "20sp"
+                theme_text_color: "Custom"
+                text_colot: "black"
+                halign: "center"
+                radius: [20, ]
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+            
+        
+            

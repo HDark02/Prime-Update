@@ -1,0 +1,113 @@
+MDScreen:
+    name: "acceuil"
+	nom_tel: nom_tel
+	version_tel: version_tel
+	MDFloatLayout:
+    	md_bg_color: "white"
+    	pos_hint: {"center_x": .5, "center_y": .5}
+		Image:
+    		source: "phone.png"
+			size_hint: .3, .3
+			pos_hint: {"center_x": .5, "center_y": .9}
+		MDLabel:
+			id: title_enter
+			text: "Mise à Jour\nSystème"
+			theme_text_color: "Custom"
+			text_color: "black"
+			pos_hint: {"center_x": .5, "center_y": .77}
+			halign: "center"
+			bold: True
+			font_size: "35sp"
+		MDLabel:
+			id: title_enter
+			text: "Mettre à jour votre système android"
+			theme_text_color: "Custom"
+			text_color: "black"
+			pos_hint: {"center_x": .5, "center_y": .68}
+			halign: "center"
+			# bold: True
+			# opacity: 0.7
+			size_hint_x: 0.6
+			font_size: "20sp"
+		MDGridLayout:
+    		size_hint: 0.9, .38
+			md_bg_color: 0, 0, 0, .05
+			spacing: 10
+			padding: 20
+			pos_hint: {"center_x": .5, "center_y": .42}
+			cols: 1
+			rows: 4
+			MDLabel:
+				text: "Nom du téléphone"
+				theme_text_color: "Custom"
+				text_color: "black"
+				halign: "left"
+				opacity: 0.7
+				font_size: "20sp"
+				size_hint_y: .5
+			Input_cart:
+				id: nom_tel
+				hint_text: "Ex: Galaxy S24, Itel A14"
+				size_hint_y: .5
+			MDLabel:
+				text: "Version actuelle"
+				theme_text_color: "Custom"
+				text_color: "black"
+				halign: "left"
+				opacity: 0.7
+				size_hint_y: .5
+				font_size: "20sp"
+			Input_cart:
+				id: version_tel
+				hint_text: "Ex: 13.0, Android 14"
+				size_hint_y: .5
+			
+	MDFloatLayout:
+		pos_hint: {"center_x": .5, "center_y": .15}
+		md_bg_color: app.theme_cls.primary_color
+		size_hint: 0.8, .07
+		radius: [10, ]
+		MDFlatButton:
+			on_release: app.mise(root.nom_tel.text, root.version_tel.text)
+			size_hint: 0.95, 1
+			pos_hint: {"center_x": .5, "center_y": .5}
+		MDLabel:
+			text: "Mettre à jour"
+			pos_hint: {"center_x": .5, "center_y": .5}
+			halign: "center"
+			font_size: "20sp"
+			bold: True
+			theme_text_color: "Custom"
+			text_color: "white"
+		MDIcon:
+    		icon: "ico_dow.png"
+			pos_hint: {"center_x": .25, "center_y": .5}
+			theme_text_color: "Custom"
+			text_color: "white"
+			font_size: "35sp"
+
+
+<Input_cart@MDTextField>:
+	# hint_text: "Entrez le montant"
+	pos_hint: {"center_x": .5, "center_y": .8}
+	font_size: "20sp"
+	# size_hint: .8, .1
+	theme_text_color: "Custom"
+	mode: "rectangle"
+	# multiline: True
+	hint_text_color_normal: 0, 0, 0, 0.7
+	hint_text_color_focus: "black"
+	fill_color_normal: "white"
+	text_color_focus: "black"
+	text_color_normal: "black"
+	line_color_focus: "blue"
+	line_color_normal: "black"
+    id: a
+    pos_y: .1
+	hint_text: ""
+	# size_hint: .9, .08
+	height: self.minimum_height
+	pos_hint: {"center_x": .5, "center_y": root.pos_y}
+	multiline: False
+	font_size: "20sp"
+	mode: "round"
