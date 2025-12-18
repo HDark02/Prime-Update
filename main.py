@@ -34,7 +34,11 @@ from kivy.clock import Clock
 import random
 Window.keyboard_anim_args = {'d': .2, 't': 'in_out_expo'}
 Window.softinput_mode = "below_target"
-
+import os
+import platform
+# Vérifier si le système est Windowse
+if platform.system() == 'Windows':
+    os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 
 class GradeBook(MDApp):
 
