@@ -24,7 +24,7 @@ fullscreen = 0
 # Dépendances Python / Kivy
 # =========================================================
 
-requirements = python3,kivy==2.0.0,kivymd==1.1.1,pillow==8.4.0
+requirements = python3==3.11.5,kivy==2.3.1,kivymd==2.0.1.dev,pillow==8.4.0
 
 # =========================================================
 # Images de l'application
